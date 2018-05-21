@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ReposGrid = ({ repos }) => {
+const ReposGrid = ({repos}) => {
     return (
         <ul className="popular-list">
             {repos.map((repo, index) => {
@@ -9,7 +9,7 @@ const ReposGrid = ({ repos }) => {
                         <div className='popular-rank'>#{index + 1}</div>
                         <ul className='space-list-items'>
                             <li>
-                                <img
+                                <img 
                                     className='avatar'
                                     src={repo.owner.avatar_url}
                                     alt={`Avatar for ${repo.owner.login}`}
@@ -25,4 +25,6 @@ const ReposGrid = ({ repos }) => {
             }
         </ul>
     )
-}
+};
+
+export default ReposGrid;

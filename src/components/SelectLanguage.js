@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SelectLanguages = ({selecedLanguage, updateLanguage}) => {
+const SelectLanguages = ({selectedLanguage, updateLanguage}) => {
     const languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
 
     return (
@@ -8,8 +8,8 @@ const SelectLanguages = ({selecedLanguage, updateLanguage}) => {
             {languages.map((language) => {
                 return (
                     <li
-                        style={language === selectedLanguage ? {color: '#d0021b'} : null} 
-                        key={language} 
+                        style={language === selectedLanguage ? {color: '#d0021b'} : null}
+                        key={language}
                         onClick={ () => updateLanguage(language) }>
                         {language}
                     </li>
@@ -18,3 +18,5 @@ const SelectLanguages = ({selecedLanguage, updateLanguage}) => {
         </ul>
     )
 }
+
+export default SelectLanguages;
